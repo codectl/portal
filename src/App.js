@@ -1,8 +1,9 @@
 import React from "react"
-import {Route, Routes} from "react-router-dom"
+import {Navigate, Route, Routes} from "react-router-dom"
 
-import "./App.scss"
+import "App.scss"
 import AboutUs from "pages/AboutUs"
+import Files from "pages/Files"
 import Home from "pages/Home"
 
 const App = () => {
@@ -10,6 +11,8 @@ const App = () => {
         <>
             <Routes>
                 <Route index element={<Home/>}/>
+                <Route path="/home" element={<Navigate to="/" replace/>}/>
+                <Route path="/files" element={<Files/>}/>
                 <Route path="/about-us" element={<AboutUs/>}/>
             </Routes>
         </>
