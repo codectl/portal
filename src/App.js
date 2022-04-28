@@ -1,10 +1,11 @@
 import React from "react"
 import {Navigate, Route, Routes} from "react-router-dom"
 
-import "App.scss"
 import AboutUs from "pages/AboutUs"
 import Files from "pages/Files"
 import Home from "pages/Home"
+
+import "App.scss"
 
 const App = () => {
     return (
