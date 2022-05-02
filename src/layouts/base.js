@@ -4,7 +4,7 @@ import {Helmet} from "react-helmet"
 import Navbar from "components/Navbar"
 
 
-const Layout = ({children, title, description}) =>
+const BaseLayout = ({children, title, description}) =>
     <>
         <Helmet>
             <title>{title}</title>
@@ -14,4 +14,4 @@ const Layout = ({children, title, description}) =>
         <main>{children}</main>
     </>
 
-export default Layout
+export default BaseLayout
