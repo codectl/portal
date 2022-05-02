@@ -9,7 +9,7 @@ import JobSubmissionForm from "./components/JobSubmission"
 const Files = () => {
     return (
         <BaseLayout title="Files" description="Files page">
-            <Grid container>
+            <Grid container spacing={2} p={2}>
                 <Grid item xs={6}>
                     <JobSubmissionForm/>
                 </Grid>
