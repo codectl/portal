@@ -1,35 +1,21 @@
 import React from "react"
-import {
-    FileManagerComponent,
-    Inject,
-    NavigationPane,
-    DetailsView,
-    Toolbar
-} from "@syncfusion/ej2-react-filemanager";
+import Grid from "@mui/material/Grid"
 
+import FileManager from "./components/FileManager"
 import Layout from "layouts/base"
 
 
 const Files = () => {
-    const hostUrl = "https://ej2-aspcore-service.azurewebsites.net/";
-
     return (
         <Layout title="Files" description="Files page">
-            <div>
-                <div className="control-section">
-                    <FileManagerComponent
-                        id="overview-file"
-                        allowDragAndDrop={true}
-                        ajaxSettings={{
-                            url: hostUrl + "api/FileManager/FileOperations",
-                            getImageUrl: hostUrl + "api/FileManager/GetImage",
-                            uploadUrl: hostUrl + "api/FileManager/Upload",
-                            downloadUrl: hostUrl + "api/FileManager/Download"
-                        }} view={"Details"}>
-                        <Inject services={[NavigationPane, DetailsView, Toolbar]}/>
-                    </FileManagerComponent>
-                </div>
-            </div>
+            <Grid container>
+                <Grid item xs={6}>
+
+                </Grid>
+                <Grid item xs={6}>
+                    <FileManager/>
+                </Grid>
+            </Grid>
         </Layout>
     )
 }
